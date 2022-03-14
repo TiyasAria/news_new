@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_new/screen/detail_screen.dart';
 import 'package:news_new/utils/utils.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
@@ -15,7 +16,7 @@ class NewsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-
+          Navigator.pushNamed(context, DetailPage.routeName);
       },
       child: Card(
         elevation: 5,
@@ -105,9 +106,6 @@ class NewsItem extends StatelessWidget {
                     ),
                   )
               ),
-              Padding(
-                padding: EdgeInsets.only(right: 5),
-                  child: Icon(Icons.bookmark_border_rounded))
             ],
           ),
         ),
