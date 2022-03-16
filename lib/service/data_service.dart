@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:news_new/model/article.dart';
 
-String apiKey = 'f342cff3d5de4e6abc0604909f533bf4';
+String apiKey = 'ketik api key kamu ya ';
 String baseUrl = 'https://newsapi.org/v2';
 
 class News {
