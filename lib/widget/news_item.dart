@@ -16,7 +16,7 @@ class NewsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-          Navigator.pushNamed(context, DetailPage.routeName);
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(article: article)));
       },
       child: Card(
         elevation: 5,

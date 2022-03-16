@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:news_new/model/article.dart';
 
+import '../screen/detail_screen.dart';
 import '../utils/utils.dart';
 
 class CarouselWidget extends StatefulWidget {
@@ -19,7 +20,10 @@ class _CarouselWidgetState extends State<CarouselWidget> {
   void initState() {
     imageSlider = widget.articleList.map((article) =>
     GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(article: article)));
+
+      },
       child: Container(
         margin: EdgeInsets.all(10),
         child: Stack(

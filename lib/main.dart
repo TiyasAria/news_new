@@ -29,7 +29,6 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/',
       routes: {
         '/' : (context) => HomePage(),
-        DetailPage.routeName : (context)  => DetailPage(article: article)
       },
       // home: HomePage(articles),
     );

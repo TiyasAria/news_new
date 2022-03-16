@@ -6,8 +6,7 @@ import '../utils/utils.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key, required this.article}) : super(key: key);
-  final Article? article;
-  static const routeName = '/detail-articles';
+  final Article article;
 
   @override
   _DetailPageState createState() => _DetailPageState();
@@ -23,7 +22,7 @@ class _DetailPageState extends State<DetailPage> {
       body: SafeArea(
           child: Stack(
             children: [
-              Image.network(widget.article!.urlToImage,
+              Image.network(widget.article.urlToImage,
                 height: 350,
                 fit: BoxFit.cover,
               ),
@@ -41,7 +40,7 @@ class _DetailPageState extends State<DetailPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 24,),
-                          Text(widget.article!.title,
+                          Text(widget.article.title,
                             style: titleArticle.copyWith(
                                 fontSize: 18
                             ),),
@@ -54,7 +53,7 @@ class _DetailPageState extends State<DetailPage> {
                                 children: [
                                   const Icon(Icons.account_circle, size: 24,),
                                   const SizedBox(width: 10,),
-                                  Text(widget.article!.author,
+                                  Text(widget.article.author,
                                     style: authorDateArticle.copyWith(
                                         fontSize: 14
                                     ),)
@@ -65,7 +64,7 @@ class _DetailPageState extends State<DetailPage> {
                                 children: [
                                   const Icon(Icons.calendar_today_outlined, size: 24,),
                                   const SizedBox(width: 10,),
-                                  Text(timeUntil(DateTime.parse(widget.article!.publishedAt)),
+                                  Text(timeUntil(DateTime.parse(widget.article.publishedAt)),
                                     style: authorDateArticle.copyWith(
                                         fontSize: 14
                                     ),
@@ -75,7 +74,7 @@ class _DetailPageState extends State<DetailPage> {
                             ],
                           ),
                           const SizedBox(height: 20,),
-                          Text(widget.article!.content,
+                          Text(widget.article.content,
                             textAlign: TextAlign.left,
                             style: detailArticle.copyWith(
                                 fontSize: 16
